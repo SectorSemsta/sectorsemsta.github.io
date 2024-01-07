@@ -22,26 +22,26 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="Xeyus&#39;archieves">
-<meta property="og:url" content="https://sectorsemsta.github.io/index.html">
+<meta property="og:url" content="https://sectorsemsta.github.io/tags/%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%90%A5/index.html">
 <meta property="og:site_name" content="Xeyus&#39;archieves">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Xeyus">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://sectorsemsta.github.io/">
+<link rel="canonical" href="https://sectorsemsta.github.io/tags/%E5%8D%9A%E5%AE%A2%E8%BF%90%E8%90%A5/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
+    isHome : false,
     isPost : false,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Xeyus'archieves</title>
+  <title>标签: 博客运营 | Xeyus'archieves</title>
   
 
 
@@ -139,86 +139,50 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content tag">
             
-      
+
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sectorsemsta.github.io/2024/01/01/%E4%BD%BF%E7%94%A8hexo%20d%E5%91%BD%E4%BB%A4%E6%97%B6%E5%8F%8D%E5%A4%8D%E6%8A%A5%E9%94%99%E7%9A%84%E5%8F%AF%E8%83%BD%E5%8E%9F%E5%9B%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Xeyus">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Xeyus'archieves">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/01/01/%E4%BD%BF%E7%94%A8hexo%20d%E5%91%BD%E4%BB%A4%E6%97%B6%E5%8F%8D%E5%A4%8D%E6%8A%A5%E9%94%99%E7%9A%84%E5%8F%AF%E8%83%BD%E5%8E%9F%E5%9B%A0/" class="post-title-link" itemprop="url">利用Hexo建立博客时遇到的一些问题</a>
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <h2 class="collection-header">博客运营
+          <small>标签</small>
         </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-01-01 13:47:07" itemprop="dateCreated datePublished" datetime="2024-01-01T13:47:07+08:00">2024-01-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-01-07 22:28:58" itemprop="dateModified" datetime="2024-01-07T22:28:58+08:00">2024-01-07</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+      </div>
 
       
-          <h2 id="无法部署"><a href="#无法部署" class="headerlink" title="无法部署"></a>无法部署</h2><p>“INFO Validating config<br>ERROR Deployer not found: git”</p>
-<p>我在部署博客时完全按照教程进行，前前后后检查过不下十次_config.yml设置，却仍然看见上方代码二十余次。</p>
-<p>排除了设置错误、未安装git等错误后，我锁定了目标：hexo-deployer-git 并未正确安装或添加到项目的依赖中。</p>
-<p>解决方法：</p>
-<ol>
-<li>确保在 package.json 文件中的 dependencies 部分添加了 hexo-deployer-git 的依赖。如无下列代码，请手动添加。<br><code>&quot;dependencies&quot;: &#123; ... &quot;hexo-deployer-git&quot;: &quot;^4.0.0&quot;, ... &#125;</code></li>
-<li>以管理员身份启动Git Bash，使用cd命令进入Hexo 项目根目录，运行 <code>npm install</code> 重新安装所有项目的依赖。</li>
-<li>运行 <code>hexo d</code>或<code>hexo deploy</code>。</li>
-</ol>
-<h2 id="显示Page-Not-Found"><a href="#显示Page-Not-Found" class="headerlink" title="显示Page Not Found"></a>显示Page Not Found</h2><p>修改博客内容并上传后，在进入网站时显示Page Not Found。<br>首先，检查public文件夹下有无index.html，及其是否上传至Github仓库。<br>如无，则检查.gitignore和_config.yml，确定所有文件均被追踪且配置项无误。</p>
-<p>如果.gitignore内有_config.yml等字样，请删除。如果不确定哪些需要删除，可以把该文件的所有内容清除，或复制文件内容并询问Chat GPT。</p>
-<p>如果你并没有耐心逐一排查_config.yml内的错误，或是像我一样并不知道它们可能出现什么错误，会有什么表现，请复制其内容，询问Chat GPT。</p>
-<p>git add等命令的使用方法不于此赘述，如有疑问可上网搜索相关教程（如菜鸟教程内有详细的教程），或询问Chat GPT。</p>
-<p>总结：如果遇到问题，检查.gitignore，_config.yml，pakage.json，public文件夹和theme文件夹。如果你不知道这意味着什么，甚至不知道该怎么搜索相关内容，找一个人工智能问问。</p>
-
-      
+    <div class="collection-year">
+      <span class="collection-header">2024</span>
     </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2024-01-01T13:47:07+08:00"
+              content="2024-01-01">
+          01-01
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/01/01/%E4%BD%BF%E7%94%A8hexo%20d%E5%91%BD%E4%BB%A4%E6%97%B6%E5%8F%8D%E5%A4%8D%E6%8A%A5%E9%94%99%E7%9A%84%E5%8F%AF%E8%83%BD%E5%8E%9F%E5%9B%A0/" itemprop="url">
+            <span itemprop="name">利用Hexo建立博客时遇到的一些问题</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+    </div>
+  </div>
+  
+  
+  
 
   
 
